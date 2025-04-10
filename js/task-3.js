@@ -1,18 +1,19 @@
 class StringBuilder {
+  #value;
   constructor(initialValue) {
-    this._value = initialValue;
+    this.#value = initialValue;
   }
   getValue() {
-    return this._value;
+    return this.#value;
   }
   padEnd(str) {
-    return (this._value += str);
+    return (this.#value += str);
   }
   padStart(str) {
-    return (this._value = str + this._value);
+    return (this.#value = str + this.#value);
   }
   padBoth(str) {
-    return (this._value = str + this._value + str);
+    return (this.#value = str + this.#value + str);
   }
 }
 
